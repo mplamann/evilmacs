@@ -62,6 +62,8 @@
   (setq evil-leader/leader "SPC")
   (global-evil-leader-mode)
   (evil-leader/set-key
+    ;; c- compilation
+    "c" 'compile
     ;; f- file operations
     "fs" 'save-buffer
     ;; g- version control
@@ -71,9 +73,10 @@
     ;; t- text manipulation
     "tr" 'indent-region
     ;; b- buffer operations
-    "bb" 'switch-to-buffer
+    "s" 'switch-to-buffer
     "bn" 'switch-to-next-buffer
-    "bp" 'switch-to-prev-buffer))
+    "bp" 'switch-to-prev-buffer
+    "br" 'revert-buffer))
 
 (use-package
   haskell-mode
